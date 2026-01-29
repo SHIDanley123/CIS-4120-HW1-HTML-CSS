@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Penn Course Search (Static Mock)</title>
+
+  <style>
+    :root{
+      --penn-blue:#011F5B;
+      --penn-red:#990000;
+      --bg:#d9d9d9;
+      --panel:#efefef;
+      --field:#f7f7f7;
+      --field-border:#cfcfcf;
+      --text:#1d1d1d;
+      --muted:#6c6c6c;
+    }
+
+    *{
+      box-sizing:border-box;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body{
+      margin:0;
+      background:#f2f2f2;
+      display:flex;
+      justify-content:center;
+      padding:22px 12px;
+      color:var(--text);
+    }
+
+    /* Phone frame */
+    .phone{
+      width:390px;
+      height:780px;
+      background:var(--bg);
+      border-radius:26px;
+      overflow:hidden;
+      box-shadow:0 12px 30px rgba(0,0,0,.18);
+      border:1px solid #e6e6e6;
+    }
+
+    /* Top Penn header */
+    .topbar{
+      height:64px;
+      background:var(--penn-blue);
+      display:flex;
+      align-items:center;
+      padding:0 14px;
+    }
+
+    .penn-logo{
+      height:36px;
+      width:auto;
+    }
+
+    /* Section title bar */
+    .section-title{
+      background:var(--penn-red);
+      color:#fff;
+      text-align:center;
+      font-weight:700;
+      font-size:18px;
+      padding:14px 10px;
+    }
+
+    .content{
+      padding:16px 18px 22px;
+    }
+
+    .center-stack{
+      max-width:330px;
+      margin:0 auto;
+    }
+
+    .card{
+      background:var(--panel);
+      border-radius:10px;
+      padding:12px;
+      border:1px solid rgba(0,0,0,.06);
+    }
+
+    /* Fields */
+    .field{
+      background:var(--field);
+      border:1px solid var(--field-border);
+      border-radius:8px;
+      height:46px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--muted);
+      font-size:14px;
+      margin:10px 0;
+      text-align:center;
+      padding:0 12px;
+    }
+
+    .field.select{
+      justify-content:space-between;
+      padding:0 14px;
+      color:#333;
+    }
+
+    .field.select .label{
+      opacity:.75;
+      font-weight:600;
+    }
+
+    .field.select .chev{
+      width:0;
+      height:0;
+      border-left:6px solid transparent;
+      border-right:6px solid transparent;
+      border-top:8px solid #666;
+    }
+
+    /* Buttons */
+    .btn{
+      width:100%;
+      height:54px;
+      border:none;
+      border-radius:10px;
+      background:var(--penn-blue);
+      color:#fff;
+      font-weight:700;
+      font-size:16px;
+      margin-top:12px;
+      cursor:default;
+      box-shadow:0 3px 0 rgba(0,0,0,.18);
+    }
+
+    .divider{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      margin:18px 2px 12px;
+      color:#666;
+      font-size:13px;
+      font-weight:600;
+    }
+
+    .divider::before,
+    .divider::after{
+      content:"";
+      height:1px;
+      background:rgba(0,0,0,.18);
+      flex:1;
+    }
+
+    .menu .btn{
+      margin-top:14px;
+      height:56px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="phone">
+
+    <!-- TOP HEADER WITH YOUR LOGO -->
+    <div class="topbar">
+      <img
+        src="penn logo.png"
+        alt="University of Pennsylvania"
+        class="penn-logo"
+      />
+    </div>
+
+    <div class="section-title">Search Classes</div>
+
+    <div class="content">
+      <div class="center-stack">
+        <div class="card">
+
+          <div class="field select">
+            <span class="label">Spring 2026</span>
+            <span class="chev"></span>
+          </div>
+
+          <div class="field">Title, Subject, Instructor, Keyword</div>
+          <div class="field">Instruction Method</div>
+
+          <button class="btn">Search</button>
+          <button class="btn">Search by Peer Recommended</button>
+
+          <div class="divider">Suggestions</div>
+
+          <div class="menu">
+            <button class="btn">Explore Programs</button>
+            <button class="btn">Degree Audit &amp; Advising</button>
+            <button class="btn">Primary Cart</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
